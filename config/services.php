@@ -30,5 +30,17 @@ return [
         'secret' => env('AWS_SECRET_ACCESS_KEY'),
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
+    'news_api' => [
+        'key' => env('NEWS_API_KEY'),
+    ],
+    'new_york_times' => [
+        'key' => env('NEW_YORK_TIMES_KEY'),
+        'secret' => env('NEW_YORK_TIMES_SECRET')
+    ],
+    'guardian' => [
+        'key' => env('GUARDIAN_API_KEY')
+    ]
+
+
 
 ];
