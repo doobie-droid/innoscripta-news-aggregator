@@ -10,7 +10,7 @@ use Tests\TestCase;
 
 class NewYorkTimesApiServiceTest extends TestCase
 {
-    public function test_it_fetches_trending_articles_for_new_york_times_api_and_returns_dtos()
+    public function test_it_fetches_trending_articles_for_new_york_times_api_and_returns_dtos(): void
     {
 
         Http::fake([

@@ -9,7 +9,7 @@ use Tests\TestCase;
 
 class NewsApiServiceTest extends TestCase
 {
-    public function test_it_fetches_trending_articles_and_returns_dtos()
+    public function test_it_fetches_trending_articles_and_returns_dtos(): void
     {
 
         Http::fake([
@@ -67,7 +67,7 @@ class NewsApiServiceTest extends TestCase
         $this->assertEquals('cnn', $articles[0]->source);
     }
 
-    public function test_it_fetches_articles_and_returns_dtos()
+    public function test_it_fetches_articles_and_returns_dtos(): void
     {
         Http::fake([
             'https://newsapi.org/v2/everything*' => Http::response([
