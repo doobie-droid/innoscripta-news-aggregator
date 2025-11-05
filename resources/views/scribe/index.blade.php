@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>NEWS_AGGREGATOR API Documentation</title>
+    <title>Laravel API Documentation</title>
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
 
@@ -168,7 +168,7 @@ access-control-allow-origin: *
 
 <code class="language-json" style="max-height: 300px;">{
     &quot;status&quot;: &quot;ok&quot;,
-    &quot;timestamp&quot;: &quot;2025-11-05T10:03:56.454025Z&quot;,
+    &quot;timestamp&quot;: &quot;2025-11-05T10:21:02.099726Z&quot;,
     &quot;version&quot;: &quot;1.0.0&quot;,
     &quot;environment&quot;: &quot;local&quot;
 }</code>
@@ -309,30 +309,30 @@ fetch(url, {
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: [
         {
-            &quot;id&quot;: &quot;a0489b4d-cea2-4065-8a0d-b0433e077b33&quot;,
-            &quot;title&quot;: &quot;Animi et corporis minima voluptatem.&quot;,
-            &quot;description&quot;: &quot;Quis est saepe in voluptatibus tempora odio deserunt rerum. Vel et deleniti sunt facere magnam asperiores voluptas animi. Et dolorem sit quisquam impedit et.&quot;,
-            &quot;url&quot;: &quot;https://mclaughlin.com/architecto-pariatur-ut-sunt-blanditiis-laborum-inventore-quis.html&quot;,
-            &quot;cover_image&quot;: &quot;https://via.placeholder.com/640x480.png/004433?text=nihil&quot;,
-            &quot;content&quot;: &quot;Sed voluptatem reiciendis sunt hic. Sint provident vel autem. Facere temporibus suscipit voluptatibus labore rem at. Quia quae quibusdam et sequi corrupti tenetur debitis. Nulla modi amet est fuga. Aliquid beatae corrupti libero. Quos totam et iste autem. Quo eos autem aliquid cupiditate. Exercitationem molestias voluptatum saepe sed fuga culpa voluptatem.&quot;,
-            &quot;author&quot;: &quot;Berta Will I&quot;,
-            &quot;published_at&quot;: &quot;2025-11-01T00:32:16.000000Z&quot;,
-            &quot;source&quot;: &quot;id&quot;,
-            &quot;created_at&quot;: &quot;2025-11-05T10:03:56.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-05T10:03:56.000000Z&quot;
+            &quot;id&quot;: &quot;a048a16a-cb65-476b-a422-b48a811a2c4f&quot;,
+            &quot;title&quot;: &quot;Vel et illum ullam et et rem.&quot;,
+            &quot;description&quot;: &quot;Alias architecto et ut alias in. Aut ratione iste iure natus temporibus beatae laboriosam. Placeat magni pariatur repellat accusantium ab. Modi rerum laboriosam quia quia voluptas sit.&quot;,
+            &quot;url&quot;: &quot;http://www.leffler.com/&quot;,
+            &quot;cover_image&quot;: &quot;https://via.placeholder.com/640x480.png/00aa66?text=sunt&quot;,
+            &quot;content&quot;: &quot;Qui sunt officia dolores velit. Dignissimos odio voluptas porro facilis nihil. Repellat ut aliquid qui esse voluptatem cupiditate. Iure reiciendis velit vero ex id voluptate autem. Velit eum ducimus vel eligendi. Quod consequuntur blanditiis provident veniam magnam id vel voluptatem. Voluptatem nam accusantium ullam tempore nihil harum. Aspernatur quasi id iusto dolores porro voluptas sit.&quot;,
+            &quot;author&quot;: &quot;Catalina Kuhic&quot;,
+            &quot;published_at&quot;: &quot;2025-10-13T15:20:10.000000Z&quot;,
+            &quot;source&quot;: &quot;quis&quot;,
+            &quot;created_at&quot;: &quot;2025-11-05T10:21:02.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-05T10:21:02.000000Z&quot;
         },
         {
-            &quot;id&quot;: &quot;a0489b4d-d678-4bed-be8a-d45dc1cbf2ca&quot;,
-            &quot;title&quot;: &quot;Iste ipsa ullam labore iusto velit omnis.&quot;,
-            &quot;description&quot;: &quot;Est odio reprehenderit quaerat et nulla. Quae dolore iure voluptatem esse qui ut. Illum voluptatibus ipsa voluptas ex occaecati.&quot;,
-            &quot;url&quot;: &quot;http://doyle.com/vel-nemo-aut-excepturi-sed-veniam-voluptas-qui-quas.html&quot;,
-            &quot;cover_image&quot;: &quot;https://via.placeholder.com/640x480.png/002266?text=quod&quot;,
-            &quot;content&quot;: &quot;Vel asperiores omnis voluptatem qui consequatur ea. Ad unde consequatur velit aut pariatur ut nisi. Possimus veniam ab consequuntur id numquam. Quia est repudiandae dicta et numquam molestiae quis. Culpa veritatis aut explicabo illum quo qui. Distinctio et omnis quo nihil vero quasi. Aperiam est perferendis quibusdam eum amet incidunt. Dolorem debitis molestiae nobis dicta qui non in.&quot;,
-            &quot;author&quot;: &quot;Alfreda Kiehn&quot;,
-            &quot;published_at&quot;: &quot;2025-11-05T07:52:47.000000Z&quot;,
-            &quot;source&quot;: &quot;qui&quot;,
-            &quot;created_at&quot;: &quot;2025-11-05T10:03:56.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-05T10:03:56.000000Z&quot;
+            &quot;id&quot;: &quot;a048a16a-d712-4364-8051-a70712390d23&quot;,
+            &quot;title&quot;: &quot;Quod sit aut quis labore eveniet.&quot;,
+            &quot;description&quot;: &quot;Aut consequatur qui voluptas amet. Corrupti consequatur et consequatur iure suscipit tempora quae perferendis.&quot;,
+            &quot;url&quot;: &quot;http://www.kub.com/et-sint-odio-maxime-qui-et&quot;,
+            &quot;cover_image&quot;: &quot;https://via.placeholder.com/640x480.png/002244?text=voluptatem&quot;,
+            &quot;content&quot;: &quot;Saepe ratione autem harum nostrum quia sed officia. Nihil sit eum voluptatem dicta vel illum facilis. Officiis consequatur laboriosam dolorum et maiores. Qui nostrum iure officia maiores sed optio. Blanditiis qui quaerat voluptatem. Perspiciatis aliquam praesentium aut mollitia nihil. Unde praesentium numquam rerum deserunt hic et culpa. Corrupti temporibus impedit et amet. Accusantium consequuntur nesciunt et ut veritatis minima. Dolores veniam corporis harum incidunt.&quot;,
+            &quot;author&quot;: &quot;Dr. Justice Schneider&quot;,
+            &quot;published_at&quot;: &quot;2025-11-01T19:13:49.000000Z&quot;,
+            &quot;source&quot;: &quot;debitis&quot;,
+            &quot;created_at&quot;: &quot;2025-11-05T10:21:02.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-05T10:21:02.000000Z&quot;
         }
     ]
 }</code>
@@ -611,18 +611,18 @@ fetch(url, {
 <code class="language-json" style="max-height: 300px;">{
     &quot;data&quot;: [
         {
-            &quot;id&quot;: &quot;a0489b4d-e549-4791-8378-45a43b370829&quot;,
-            &quot;name&quot;: &quot;Et&quot;,
-            &quot;slug&quot;: &quot;et&quot;,
-            &quot;created_at&quot;: &quot;2025-11-05T10:03:56.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-05T10:03:56.000000Z&quot;
+            &quot;id&quot;: &quot;a048a16a-e070-4fd5-83f8-734de837b1b5&quot;,
+            &quot;name&quot;: &quot;Numquam&quot;,
+            &quot;slug&quot;: &quot;numquam&quot;,
+            &quot;created_at&quot;: &quot;2025-11-05T10:21:02.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-05T10:21:02.000000Z&quot;
         },
         {
-            &quot;id&quot;: &quot;a0489b4d-e80e-483b-8804-6c4102d25815&quot;,
-            &quot;name&quot;: &quot;Quo&quot;,
-            &quot;slug&quot;: &quot;quo&quot;,
-            &quot;created_at&quot;: &quot;2025-11-05T10:03:56.000000Z&quot;,
-            &quot;updated_at&quot;: &quot;2025-11-05T10:03:56.000000Z&quot;
+            &quot;id&quot;: &quot;a048a16a-e434-48fd-91b1-6f27e2c94e93&quot;,
+            &quot;name&quot;: &quot;Omnis&quot;,
+            &quot;slug&quot;: &quot;omnis&quot;,
+            &quot;created_at&quot;: &quot;2025-11-05T10:21:02.000000Z&quot;,
+            &quot;updated_at&quot;: &quot;2025-11-05T10:21:02.000000Z&quot;
         }
     ]
 }</code>

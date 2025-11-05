@@ -58,20 +58,20 @@ composer install
 cp .env.example .env && cp .env.example .env.testing
 ```
 
-### 5. Configure database
+### 4. Configure database
 
 Edit `.env.testing` file with your database credentials:
 
 ```env
 DB_DATABASE=testing
 ```
-### 6.Start Docker containers with laravel sail
+### 5.Start Docker containers with laravel sail
 
 ```bash
 sail up
 ```
 
-### 7. Run migrations
+### 6. Run migrations
 
 ```bash
 sail artisan migrate
@@ -87,7 +87,12 @@ http://localhost:8080/api
 ```
 
 ### Visit The Docs
+## Generate the Documentation
+```
+sail artisan scribe:generate
+```
 
+## Visit the docs
 ```
 http://localhost:8080/documentation
 ```
