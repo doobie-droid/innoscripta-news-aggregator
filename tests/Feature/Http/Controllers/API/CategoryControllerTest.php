@@ -1,6 +1,7 @@
 <?php
 
-namespace Tests\Feature;
+
+namespace Tests\Feature\Http\Controllers\API;
 
 use App\Http\Resources\CategoryResource;
 use App\Models\Category;

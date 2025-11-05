@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Unit\Clients;
+namespace Tests\Unit\Services\News;
 
 use App\DTOs\ArticleDTO;
 use App\Services\News\NewsApiService;
