@@ -80,6 +80,14 @@ sail artisan migrate
 sail artisan migrate --env=testing
 ```
 
+## COMMAND TO RUN FETCH
+
+Run
+```
+sail artisan app:fetch-articles 
+```
+to fetch the latest articles
+
 ## API Documentation
 
 ### Base URL

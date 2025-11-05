@@ -10,6 +10,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
 
 class FetchTrendingArticles implements ShouldQueue
@@ -27,8 +28,16 @@ class FetchTrendingArticles implements ShouldQueue
      */
     public function handle(): void
     {
+        $source = $this->service->getSourceIdentifier();
+
+        Log::info('FetchTrendingArticles job started', [
+            'source' => $source
+        ]);
+
+
         $articles = $this->service->fetchTrendingArticles();
 
+        $createdCount = 0;
 
         foreach ($articles as $articleDTO) {
             $article = Article::firstOrCreate(
@@ -43,6 +52,10 @@ class FetchTrendingArticles implements ShouldQueue
                     'source' => $articleDTO->source,
                 ]
             );
+
+            if ($article->wasRecentlyCreated) {
+                $createdCount++;
+            }
 
             if (!empty($articleDTO->categories)) {
                 $categoryIds = collect($articleDTO->categories)
@@ -61,5 +74,10 @@ class FetchTrendingArticles implements ShouldQueue
                 $article->categories()->sync($categoryIds);
             }
         }
+
+        Log::info('FetchTrendingArticles job completed', [
+            'total_articles' => count($articles),
+            'new_articles_created' => $createdCount
+        ]);
     }
 }
