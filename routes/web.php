@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Response;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,4 +16,14 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::view('/documentation', 'docs');
+
+Route::get('/docs/openapi.yaml', function () {
+    $yaml = file_get_contents(storage_path('app/scribe/openapi.yaml'));
+
+    return Response::make($yaml, 200, [
+        'Content-Type' => 'text/plain',
+    ]);
 });

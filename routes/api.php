@@ -16,8 +16,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::get('/health', function () {
+    return response()->json([
+        'status' => 'ok',
+        'timestamp' => now()->toISOString(),
+        'version' => '1.0.0',
+        'environment' => app()->environment(),
+    ]);
 });
 
 Route::get('articles', [ArticleController::class, 'index'])->name('articles.index');
