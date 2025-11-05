@@ -34,7 +34,7 @@ class GuardianApiService extends API implements NewsApiInterface
     public function fetchTrendingArticles(): array
     {
 
-        $response = $this->_get('search', ['api-key' => $this->secret, 'page-size' => 5]);
+        $response = $this->_get('search', ['api-key' => $this->secret, 'page-size' => 50]);
 
         $response = $response['response'];
 
@@ -83,13 +83,14 @@ class GuardianApiService extends API implements NewsApiInterface
     {
         return new ArticleDTO(
             title: $item['webTitle'] ?? '',
-            description: '', 
+            description: '',
             url: $item['webUrl'] ?? '',
-            coverImage: '', 
-            content: '', 
+            coverImage: '',
+            content: '',
             author: '',
             publishedAt: $item['webPublicationDate'] ?? null,
             source: NewsClient::GUARDIAN->value,
+            categories: [$item['sectionId']]
         );
     }
 }

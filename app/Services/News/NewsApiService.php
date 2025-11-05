@@ -83,6 +83,7 @@ class NewsApiService extends API implements NewsApiInterface
             author: $item['author'] ?? '',
             publishedAt: $item['publishedAt'] ?? null,
             source: $item['source']['id'] ?? 'news-api',
+            categories: [],
         );
     }
 }

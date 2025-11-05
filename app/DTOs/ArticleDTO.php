@@ -13,5 +13,6 @@ class ArticleDTO
         public string $author,
         public ?string $publishedAt,
         public string $source,
+        public array $categories,
     ) {}
 }

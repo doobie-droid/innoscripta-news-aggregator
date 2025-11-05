@@ -78,6 +78,7 @@ class NewYorkTimesApiService extends API implements NewsApiInterface
             author: str_replace('By ', '', $item['byline']['original'] ?? ''),
             publishedAt: $item['pub_date'] ?? null,
             source: NewsClient::NEW_YORK_TIMES->value,
+            categories: [$item['section_name']],
         );
     }
 }
