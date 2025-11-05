@@ -4,6 +4,7 @@
 namespace Tests\Feature\Http\Controllers\API;
 
 use App\Models\Article;
+use App\Models\Category;
 use Carbon\Carbon;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
@@ -90,15 +91,52 @@ class ArticleControllerTest extends TestCase
             ->assertJsonMissing(['author' => 'Jane Smith']);
     }
 
-    // public function test_it_filters_articles_by_category()
-    // {
-    //     $response = $this->getJson('/api/articles?category=technology');
+    public function test_it_filters_articles_by_category()
+    {
+        $technologyCategory = Category::factory()->withName('Technology')->create();
+        $sportsCategory = Category::factory()->withName('Sports')->create();
 
-    //     $response->assertStatus(200)
-    //         ->assertJsonCount(1, 'data')
-    //         ->assertJsonFragment(['title' => 'Technology Article'])
-    //         ->assertJsonMissing(['title' => 'Sports Article']);
-    // }
+        $techArticle = Article::factory()->create(['title' => 'Technology Article']);
+        $sportsArticle = Article::factory()->create(['title' => 'Sports Article']);
+
+        $techArticle->categories()->sync([$technologyCategory->id]);
+        $sportsArticle->categories()->sync([$sportsCategory->id]);
+
+        $response = $this->getJson(route('api.articles.index', [
+            'category' => $technologyCategory->id
+        ]));
+
+        $response->assertStatus(200)
+            ->assertJsonCount(1, 'data')
+            ->assertJsonFragment(['title' => 'Technology Article'])
+            ->assertJsonMissing(['title' => 'Sports Article']);
+    }
+
+    public function test_it_filters_articles_by_multiple_categories()
+    {
+        $techCategory = Category::factory()->withName('Technology')->create();
+        $sportsCategory = Category::factory()->withName('Sports')->create();
+        $newsCategory = Category::factory()->withName('News')->create();
+
+        $techArticle = Article::factory()->create(['title' => 'Technology Article']);
+        $sportsArticle = Article::factory()->create(['title' => 'Sports Article']);
+        $newsArticle = Article::factory()->create(['title' => 'News Article']);
+
+        $techArticle->categories()->sync([$techCategory->id]);
+        $sportsArticle->categories()->sync([$sportsCategory->id]);
+        $newsArticle->categories()->sync([$newsCategory->id]);
+
+        $response = $this->getJson(route('api.articles.index', [
+            'categories' => $techCategory->id . ',' . $sportsCategory->id 
+        ]));
+
+
+        $response->assertStatus(200)
+            ->assertJsonCount(2, 'data')
+            ->assertJsonFragment(['title' => 'Technology Article'])
+            ->assertJsonFragment(['title' => 'Sports Article'])
+            ->assertJsonMissing(['title' => 'News Article']);
+    }
 
     public function test_it_filters_articles_by_date_range_using_from_and_to()
     {

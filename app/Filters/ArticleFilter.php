@@ -58,13 +58,17 @@ class ArticleFilter extends Filters
 
     protected function category($value)
     {
-        return $this->builder->where('category', $value);
+        return $this->builder->whereHas('categories', function ($query) use ($value) {
+            $query->where('id', $value);
+        });
     }
 
     protected function categories($value)
     {
         $categories = explode(',', $value);
-        return $this->builder->whereIn('category', $categories);
+        return $this->builder->whereHas('categories', function ($query) use ($categories) {
+            $query->whereIn('id', $categories);
+        });
     }
 
     protected function authors($value)
