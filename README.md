@@ -55,8 +55,7 @@ composer install
 ### 3. Create environment files
 
 ```bash
-cp .env.example .env
-cp .env.example .env.testing
+cp .env.example .env && cp .env.example .env.testing
 ```
 
 ### 5. Configure database
